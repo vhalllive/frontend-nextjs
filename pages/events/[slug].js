@@ -1,10 +1,16 @@
 import { Constants } from "../../components/utils/Constants";
 import axios from "axios";
+import Card from "../../components/ui/Card";
+import { Center, Heading } from "@chakra-ui/react";
+
 export default function Event({ event, slug }){
+    
     return (
         <div>
-            <h1>{slug}</h1>
-            <h2>{ event.BrideName }</h2>
+            <Center py={6}>
+            <Heading>{ event.EventType } of { event.BrideName } & { event.GroomName }</Heading>
+            </Center>
+            <Card event={event}/>
         </div>
     )
 }
@@ -30,6 +36,7 @@ export async function getStaticProps({params}) {
     const { slug } = params;
     const response = await fetch(`${Constants.API}${Constants.EVENTS}${Constants.QUERY_FILTER}${slug}${Constants.POPULATE}`);
     const { data } = await response.json();
+    
     return {
         props: {
             event : data[0].attributes,

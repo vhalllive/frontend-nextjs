@@ -4,4 +4,5 @@ export const Constants = {
     QUERY_POPULATE : '?populate=*',
     QUERY_FILTER : '?filters[Slug][$eq]=',
     POPULATE : '&populate=*',
+    IMAGE : 'http://13.127.235.179:1337',
 }
