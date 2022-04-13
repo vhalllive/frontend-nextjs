@@ -1,8 +1,15 @@
 
 import LandingLayout from '../components/layouts/LandingLayout'
+import React from 'react'
+import Router from "next/router";
 
 export default function Home() {
-  return (
-    <LandingLayout />
-  )
+  
+    React.useEffect(() => {
+      Router.push('/landing');
+    }, []);
+    return (
+      null
+    );
+  
 }
