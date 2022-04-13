@@ -60,7 +60,7 @@ export default function Card({ event }) {
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Avatar
-            src={Constants.IMAGE + event.BridfeImage.data.attributes.url}
+            src={Constants.IMAGE + event.BrideImage.data.attributes.url}
             alt={'Author'}
           />
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
