@@ -25,7 +25,7 @@ export async function getStaticPaths() {
             slug: event.attributes.Slug,
         },
     }));
-    console.log(paths)
+  
     return {
       paths: paths,
       fallback: 'blocking',

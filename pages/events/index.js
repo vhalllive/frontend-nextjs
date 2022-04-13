@@ -16,7 +16,6 @@ import {
 
 
 export default function Events({ events }) {
-  console.log(events);
   return (
     <div>
       <Box w='100%' p={4}>
@@ -58,7 +57,6 @@ export default function Events({ events }) {
 
 export async function getStaticProps() {
   const response = await fetch(`${Constants.API}${Constants.EVENTS}${Constants.QUERY_POPULATE}`);
-  console.log(`${Constants.API}${Constants.EVENTS}${Constants.QUERY_POPULATE}`);
   const data  = await response.json();
   return {
       props: {
